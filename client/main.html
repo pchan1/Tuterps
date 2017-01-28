@@ -1,0 +1,20 @@
+<!-- Main login page -->
+<body>
+  {{> App_body}}
+</body>
+
+
+<template name="App_body">
+{{> Template.dynamic template=header}}
+{{> Template.dynamic template=main}}
+{{> Template.dynamic template=bottom}}
+{{> Template.dynamic template=footer}}  
+</template>
+
+
+
+<template name='main_page'>
+  <h1>Tuterps</h1>
+  <h3>is better than one</h3>
+  <p>{{> loginButtons}}</p>
+</template>

@@ -1,0 +1,29 @@
+<!-- Header for all pages -->
+<template name="header_temp">
+	<head>
+  		<title>Tuterps</title>
+ 		<link rel="icon" sizes="16x16 32x32" href="/images/favicon.ico">
+	</head>
+
+	{{>menu_temp}}
+</template>
+
+<template name="menu_temp">
+	<div class="ui small menu">
+	  <a class="active item">
+	    Home
+	  </a>
+
+	  <div class="labeled icon right menu">
+	  	<a class="item">
+		  	<i class="user icon"></i>
+		    Profile
+	  	</a>
+
+	    <div class="item">
+	        <div class="ui primary button">Sign Out</div>
+	    </div>
+
+	  </div>
+	</div>
+</template>

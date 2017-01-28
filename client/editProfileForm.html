@@ -1,0 +1,69 @@
+<!-- Page to edit user profile -->
+
+<template name= 'show_form_page'>
+	<p>{{>editProfileForm}}</p>
+  	<!-- <p>{{>editProfileForm_mobile}}</p> -->
+</template>
+
+
+<!-- Computer version -->
+
+<template name="editProfileForm">
+	<div class="ui stackable two column centered container">
+		<br>
+
+		<h2 class="ui header">
+		  <i class="settings icon"></i>
+		  <div class="content">
+		    Account Settings
+		    <div class="sub header">Manage your profile and preferences</div>
+		  </div>
+		</h2>
+
+		<br>
+
+		<div class="ui column stackable form success">
+			<div class="column equal width fields">
+				<div class="required field">
+					<label>First Name</label>
+					<input type="text" name="firstName" placeholder="First Name" autofocus>
+				</div>
+			<!--<div class="field">
+					<label>Middle Name</label>
+					<input type="text" name="middleName" placeholder="Middle Name">
+				</div> -->
+				<div class="field required">
+					<label>Last Name</label>
+					<input type="text" name="lastName" placeholder="Last Name">
+				</div>
+			</div>
+
+			<div class="required field">
+				<label>Year</label>
+				<input>
+			</div>
+
+			<div class="required field">
+				<label>Email</label>
+				<input type="email" name="email" placeholder="jdoe@umd.edu">
+			</div>
+
+			<div class="required field">
+				<label>Password</label>
+				<input type="password" name="password">
+			</div>
+
+			<div class="required field">
+				<label>Re-enter password</label>
+				<input type="password" name="verifyPassword">
+			</div>
+
+			<input class="fluid ui primary button" type="submit" name="submitBtn" value="Save">
+		</div>
+		<!-- SUCCESS MESSAGE -->
+		<!-- <div class="ui success message">
+		    <div class="header">Saved!</div>
+		    <p>You're settings have saved.</p>
+		</div> -->
+	</div>
+</template>
