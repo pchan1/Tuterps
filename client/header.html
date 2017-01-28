@@ -3,13 +3,14 @@
 	<head>
   		<title>Tuterps</title>
  		<link rel="icon" sizes="16x16 32x32" href="/images/favicon.ico">
+ 		<script src="js/vendor/jquery-1.11.2.min.js"></script>
 	</head>
 
 	{{>menu_temp}}
 </template>
 
 <template name="menu_temp">
-	<div class="ui small menu">
+	<div class="ui small pointing stackable menu">
 	  <a class="active item">
 	    Home
 	  </a>
@@ -19,6 +20,8 @@
 		  	<i class="user icon"></i>
 		    Profile
 	  	</a>
+
+	  	<!-- Button doesn't show up if shrunk screen -->
 
 	    <div class="item">
 	        <div class="ui primary button">Sign Out</div>

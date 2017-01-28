@@ -1,0 +1,41 @@
+<!-- Dashboard that shows Tutors and Tutees buttons -->
+
+<template name= 'show_dashboard_page'>
+	<p>{{>dashboard}}</p>
+  	<!-- <p>{{>_mobile}}</p> -->
+</template>
+
+
+<!-- Computer version -->
+
+<template name="dashboard">
+	<div class="ui stackable two column centered container">
+
+		<br>
+
+		<!-- Title for dashboard -->
+
+		<h2 class="ui header">
+		  <i class="dashboard icon"></i>
+		  <div class="content">
+		    Dashboard
+		    <div class="sub header">Select whether you want a tutor or tutee</div>
+		  </div>
+		</h2>
+
+		<br>
+
+		<!-- Giant tutors button -->
+		<button class="fluid massive ui button">
+		  Tutors
+		</button>
+
+		<br><br>
+
+		<!-- Giant tutees button -->
+		<button class="fluid massive ui button">
+		  Tutees
+		</button>
+
+	</div>
+</template>
