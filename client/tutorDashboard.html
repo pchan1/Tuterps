@@ -28,34 +28,34 @@
 
 	<div class="ui container">
 		<table class="ui single line unstackable table">
-		  <thead>
-		    <tr>
-		      <th class="three wide">Course ID</th>
-		      <th class="two wide">Hourly</th>
-		      <th class="two wide">Availability</th>
-		      <th class="two wide">Delete Course</th>
-		    </tr>
-		  </thead>
-		  <tbody>
-		    <tr>
-		      <td>CMSC131</td>
-		      <td>$10</td>
-		      <td>MWF</td>
-		      <td><button class="red ui tiny button">Delete</button></td>
-		    </tr>
-		    <tr>
-		      <td>CMSC250</td>
-		      <td>$12</td>
-		      <td>MWF</td>
-		      <td><button class="red ui tiny button">Delete</button></td>
-		    </tr>
-		    <tr>
-		      <td>CMSC351</td>
-		      <td>$15</td>
-		      <td>TTh</td>
-		      <td><button class="red ui tiny button">Delete</button></td>
-		    </tr>
-		  </tbody>
+			<thead>
+				<tr>
+					<th class="three wide">Course ID</th>
+					<th class="two wide">Hourly</th>
+					<th class="two wide">Availability</th>
+					<th class="two wide">Delete Course</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>CMSC131</td>
+					<td>$10</td>
+					<td>MWF</td>
+					<td><button class="red ui tiny button">Delete</button></td>
+				</tr>
+				<tr>
+					<td>CMSC250</td>
+					<td>$12</td>
+					<td>MWF</td>
+					<td><button class="red ui tiny button">Delete</button></td>
+				</tr>
+				<tr>
+					<td>CMSC351</td>
+					<td>$15</td>
+					<td>TTh</td>
+					<td><button class="red ui tiny button">Delete</button></td>
+				</tr>
+			</tbody>
 		</table>
 
 		<form class="ui form">
@@ -69,17 +69,17 @@
 					<input type="text" name="hourly" placeholder="Hourly">
 				</div>
 				<div class="field required seven wide">
-				    <label>Availability</label>
-				    <select multiple="" class="ui dropdown">
-				      <option value="">Select availability</option>
-				      <option value="Monday">Monday</option>
-				      <option value="Tuesday">Tuesday</option>
-				      <option value="Wednesday">Wednesday</option>
-				      <option value="Thursday">Thursday</option>
-				      <option value="Friday">Friday</option>
-				      <option value="Saturday">Saturday</option>
-				      <option value="Sunday">Sunday</option>
-				    </select>
+					<label>Availability</label>
+					<select multiple="" class="ui dropdown">
+						<option value="">Select availability</option>
+						<option value="Monday">Monday</option>
+						<option value="Tuesday">Tuesday</option>
+						<option value="Wednesday">Wednesday</option>
+						<option value="Thursday">Thursday</option>
+						<option value="Friday">Friday</option>
+						<option value="Saturday">Saturday</option>
+						<option value="Sunday">Sunday</option>
+					</select>
 				</div>
 				<div class="field three wide">
 					<button class="ui primary button" style="margin-top: 20px;">Add Class</button>
@@ -90,11 +90,18 @@
 
 	<br>
 
+	<div class="ui container form">
+		<div class="field">
+			<label>About Me</label>
+			<textarea rows="3"></textarea>
+		</div>
+		<button class="ui primary button">Save</button>
+	</div>
+
 	<script type="text/javascript">
 		$('.ui.dropdown')
-		  .dropdown({
-		    minSelections: 1
-		  })
-		;
+		.dropdown({
+			minSelections: 1
+		});
 	</script>
 </template>

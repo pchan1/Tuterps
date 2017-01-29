@@ -62,22 +62,20 @@
 		  </div>
 		  <div class="results"></div>
 		</div>
-	    <ul class="ui_list">
-	    	Majors:
+	    <div class="ui list left aligned">
 			{{#each majorL}}
 				{{> major_name}}
 			{{/each}}
-
-		</ul>
+		</div>
 
 	</div>
 </template>
 
 
 <template name='major_name'>
-	<div class=content>
-	{{#if text}}
-	<button class="fluid ui button">{{text}}</button>
-	{{/if}}
+	<div class="content">
+		{{#if text}}
+		<button class="fluid ui button">{{text}}</button>
+		{{/if}}
 	</div>
 </template>

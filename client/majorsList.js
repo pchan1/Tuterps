@@ -11,7 +11,7 @@ Template.majors.helpers({
 	},
 
 
-    });
+});
 
 
 Template.major_name.events({

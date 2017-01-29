@@ -89,23 +89,20 @@ departments page -->
 		  <div class="results"></div>
 		</div>
 
-		<ul class="ui_list">
-	    	Classes:
+		<div class="ui list">
 			{{#each classesL}}
 				{{> class_name}}
 			{{/each}}
-
-		</ul>
+		</div>
 
 		
 	</div>
 </template>
 
-<template name='class_name'>
-	<div class=content>
-		
+<template name="class_name">
+	<div class="content">
 		{{#if course}}
-		<button class="fluid left ui button">{{course}}: {{classes}} </button>
+		<button class="fluid ui button">{{course}}: {{classes}} </button>
 		{{/if}}
 	</div>
 </template>
