@@ -28,6 +28,7 @@
 
 	<div class="ui container">
 		<table class="ui single line unstackable table">
+<<<<<<< HEAD
 			<thead>
 				<tr>
 					<th class="three wide">Course ID</th>
@@ -56,6 +57,21 @@
 					<td><button class="red ui tiny button">Delete</button></td>
 				</tr>
 			</tbody>
+=======
+		  <thead>
+		    <tr>
+		      <th class="three wide">Course ID</th>
+		      <th class="two wide">Hourly</th>
+		      <th class="two wide">Availability</th>
+		      <th class="two wide">Delete Course</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		  	{{#each tutor_entries}}
+		  		{{> tutor_classes}}
+	  		{{/each}}
+		  </tbody>
+>>>>>>> d7c306fa2dd2c0d39323e130ec27b7a92d530cfb
 		</table>
 
 		<form class="ui form">
@@ -67,19 +83,19 @@
 				<div class="required field three wide">
 					<label>Hourly</label>
 					<input type="text" name="hourly" placeholder="Hourly">
-				</div>
+				</div> 
 				<div class="field required seven wide">
-					<label>Availability</label>
-					<select multiple="" class="ui dropdown">
-						<option value="">Select availability</option>
-						<option value="Monday">Monday</option>
-						<option value="Tuesday">Tuesday</option>
-						<option value="Wednesday">Wednesday</option>
-						<option value="Thursday">Thursday</option>
-						<option value="Friday">Friday</option>
-						<option value="Saturday">Saturday</option>
-						<option value="Sunday">Sunday</option>
-					</select>
+				    <label>Availability</label>
+				    <select multiple="" name=days class="ui dropdown">
+				      <option value="">Select availability</option>
+				      <option value="Monday">Monday</option>
+				      <option value="Tuesday">Tuesday</option>
+				      <option value="Wednesday">Wednesday</option>
+				      <option value="Thursday">Thursday</option>
+				      <option value="Friday">Friday</option>
+				      <option value="Saturday">Saturday</option>
+				      <option value="Sunday">Sunday</option>
+				    </select>
 				</div>
 				<div class="field three wide">
 					<button class="ui primary button" style="margin-top: 20px;">Add Class</button>
@@ -104,4 +120,15 @@
 			minSelections: 1
 		});
 	</script>
+</template>
+
+
+
+<template name='tutor_classes'>
+	<tr>
+		<td>{{course}}</td>
+		<td>{{wage}}</td>
+		<td>{{availability}}</td>
+		<td><button class="red ui tiny button">Delete</button></td>
+	</tr>
 </template>

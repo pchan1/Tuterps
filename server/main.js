@@ -2,12 +2,6 @@ import { Mongo } from 'meteor/mongo';
 Meteor.startup(() => {
   // code to run on server at startup
 
-	
-
-
-
-	
-
 
 });
 
@@ -26,7 +20,7 @@ while (matches = regex.exec(myresults)) {
 
 
 
-
+// Collection of classes
 export const classesL = new Mongo.Collection('list_of_classes')
 	results = Meteor.http.call("GET", "http://api.umd.io/v0/courses/list")
     var myresults = results.content;
@@ -36,6 +30,8 @@ export const classesL = new Mongo.Collection('list_of_classes')
         courseHash[matches[1]] = matches[2];
         classesL.insert({dep:matches[1].slice(0,4),course:matches[1], classes:matches[2]})
     }
+
+
 
 
 
