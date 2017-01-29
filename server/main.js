@@ -38,7 +38,6 @@ export const classesL = new Mongo.Collection('list_of_classes')
 
 
 
-
 Accounts.onCreateUser(
     function(options, user){
 

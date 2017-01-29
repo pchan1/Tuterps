@@ -6,21 +6,22 @@ Template.tutorDashboard.helpers({
 		if (Meteor.user()){
 			console.log( Meteor.user().profile.tutor_entries )
 			return Meteor.user().profile.tutor_entries
-
-
 		}
-
-
+	},
+	
+	about_me(){
+		if (Meteor.user()){
+			return Meteor.user().profile.aboutMe;
+		}
 	}
-
-
 });
 
 
 
 
 Template.tutorDashboard.events({
-	'submit form': function(event){
+
+	'submit .classTableForm': function(event){
 		event.preventDefault()
 		courseID = event.target.courseID.value
 		hourly = event.target.hourly.value
@@ -45,13 +46,12 @@ Template.tutorDashboard.events({
 
 	},
 
-	'click button': function(event){
+	'submit .aboutMe': function(event){
+		event.preventDefault();
+		aboutMeText = event.target.aboutMe.value;
 
-		console.log(event)
+		Meteor.users.update(Meteor.userId(), {$set: {'profile.aboutMe': aboutMeText}});
 	}
-
-
-
 })
 
 /*
