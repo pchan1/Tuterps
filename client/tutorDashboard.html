@@ -37,24 +37,9 @@
 		    </tr>
 		  </thead>
 		  <tbody>
-		    <tr>
-		      <td>CMSC131</td>
-		      <td>$10</td>
-		      <td>MWF</td>
-		      <td><button class="red ui tiny button">Delete</button></td>
-		    </tr>
-		    <tr>
-		      <td>CMSC250</td>
-		      <td>$12</td>
-		      <td>MWF</td>
-		      <td><button class="red ui tiny button">Delete</button></td>
-		    </tr>
-		    <tr>
-		      <td>CMSC351</td>
-		      <td>$15</td>
-		      <td>TTh</td>
-		      <td><button class="red ui tiny button">Delete</button></td>
-		    </tr>
+		  	{{#each tutor_entries}}
+		  		{{> tutor_classes}}
+	  		{{/each}}
 		  </tbody>
 		</table>
 
@@ -67,10 +52,10 @@
 				<div class="required field three wide">
 					<label>Hourly</label>
 					<input type="text" name="hourly" placeholder="Hourly">
-				</div>
+				</div> 
 				<div class="field required seven wide">
 				    <label>Availability</label>
-				    <select multiple="" class="ui dropdown">
+				    <select multiple="" name=days class="ui dropdown">
 				      <option value="">Select availability</option>
 				      <option value="Monday">Monday</option>
 				      <option value="Tuesday">Tuesday</option>
@@ -97,4 +82,15 @@
 		  })
 		;
 	</script>
+</template>
+
+
+
+<template name='tutor_classes'>
+	<tr>
+		<td>{{course}}</td>
+		<td>{{wage}}</td>
+		<td>{{availability}}</td>
+		<td><button class="red ui tiny button">Delete</button></td>
+	</tr>
 </template>
