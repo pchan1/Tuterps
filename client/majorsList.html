@@ -40,10 +40,12 @@
                 $('.ui.accordion').accordion();
              });
 
-			$('.ui.search').search({
-				fullTextSearch: false,
-			    source: depts
-			});
+			$('.ui.search')
+            .search({
+                type: 'standard',
+                source: depts,
+                searchFields : ['title'],
+            });
 
 			var depts = [
 				{major: ["AAST", "CMSC"]}
