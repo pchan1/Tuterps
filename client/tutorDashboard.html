@@ -1,0 +1,100 @@
+<!-- Tutors Dashboard template page to show the classes the tutor teaches -->
+
+<template name= 'show_tutorDashboard_page'>
+	<p>{{>tutorDashboard}}</p>
+	<!-- <p>{{>tutorDashboard_mobile}}</p> -->
+</template>
+
+<template name="tutorDashboard">	
+	<div class="ui stackable two column centered container">
+		<br>
+
+		<h2 class="ui header">
+			<i class="dashboard icon"></i>
+			<div class="content">
+				Tutor Dashboard
+				<div class="sub header">Manage and add classes you tutor</div>
+			</div>
+		</h2>
+
+		<h2 class="ui header">
+			<div class="content">
+				Classes
+			</div>
+		</h2>
+	</div>
+
+	<br>
+
+	<div class="ui container">
+		<table class="ui single line unstackable table">
+		  <thead>
+		    <tr>
+		      <th class="three wide">Course ID</th>
+		      <th class="two wide">Hourly</th>
+		      <th class="two wide">Availability</th>
+		      <th class="two wide">Delete Course</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    <tr>
+		      <td>CMSC131</td>
+		      <td>$10</td>
+		      <td>MWF</td>
+		      <td><button class="red ui tiny button">Delete</button></td>
+		    </tr>
+		    <tr>
+		      <td>CMSC250</td>
+		      <td>$12</td>
+		      <td>MWF</td>
+		      <td><button class="red ui tiny button">Delete</button></td>
+		    </tr>
+		    <tr>
+		      <td>CMSC351</td>
+		      <td>$15</td>
+		      <td>TTh</td>
+		      <td><button class="red ui tiny button">Delete</button></td>
+		    </tr>
+		  </tbody>
+		</table>
+
+		<form class="ui form">
+			<div class="fields">
+				<div class="required field three wide">
+					<label>Course ID</label>
+					<input type="text" name="courseID" placeholder="Course ID">
+				</div>
+				<div class="required field three wide">
+					<label>Hourly</label>
+					<input type="text" name="hourly" placeholder="Hourly">
+				</div>
+				<div class="field required seven wide">
+				    <label>Availability</label>
+				    <select multiple="" class="ui dropdown">
+				      <option value="">Select availability</option>
+				      <option value="Monday">Monday</option>
+				      <option value="Tuesday">Tuesday</option>
+				      <option value="Wednesday">Wednesday</option>
+				      <option value="Thursday">Thursday</option>
+				      <option value="Friday">Friday</option>
+				      <option value="Saturday">Saturday</option>
+				      <option value="Sunday">Sunday</option>
+				    </select>
+				</div>
+				<div class="field three wide">
+					<button class="ui primary button" style="margin-top: 20px;">Add Class</button>
+				</div>
+			</div>
+		</form>
+	</div>
+
+	<br>
+
+	<script type="text/javascript">
+		$('.ui.dropdown')
+		  .dropdown({
+		    minSelections: 1
+		  })
+		;
+	</script>
+</template>
