@@ -1,7 +1,5 @@
 <!-- Header for all pages -->
 <template name="header_temp">
-
-
 	{{>menu_temp}}
 </template>
 
@@ -11,19 +9,12 @@
 			<i class="home icon"></i> Home
 		</a>
 		<a class="item" href='/tutorDashboard'>
+		<!-- <a class="item" href='/majors'> -->
 			<i class="users icon"></i> Tutors
 		</a>
-		<a class="item" href='/dashboard'>
-			<i class="student icon"></i> Students
-		</a>
-		<a class="item" href='/account'>
-			<i class="student icon"></i> Accounts
-		</a>
 		<a class="item" href='/majors'>
-			<i class="student icon"></i> Majors
-		</a>
-		<a class="item" href='/classes'>
-			<i class="student icon"></i> Classes
+		<!-- <a class="item" href='/tutorDashboard'> -->
+			<i class="student icon"></i> Students
 		</a>
 
 		<script type="text/javascript">
@@ -38,12 +29,11 @@
 				Profile
 				<i class="dropdown icon"></i>
 				<div class="menu">
-					<div class="item">
-						
+					<a class="item" href="/account">
 						<i class="setting icon" href='account'></i> Preferences
-					</div>
+					</a>
 					<div class="item">
-						<div class="ui fluid primary button">Sign Out</div>
+						<div class="logout ui fluid primary button">Sign Out</div>
 					</div>
 				</div>
 			</div>

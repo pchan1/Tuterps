@@ -21,6 +21,8 @@ Template.editProfileForm.events({
             var password = event.target.password.value;
             Meteor.call('setPassword', password);
 
+            
+
             // var propic = event.target.profilePicture.value;
             // Meteor.call('setPropic', propic);
 
