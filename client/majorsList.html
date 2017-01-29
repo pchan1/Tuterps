@@ -35,6 +35,7 @@
 	
 	    </div>
 
+
 	    <script language='javascript'>
              $(document).ready(function(){
                 $('.ui.accordion').accordion();
@@ -50,7 +51,6 @@
 			];
 			console.log(depts);
 		</script>
-
 		<!-- Not working correctly and not right data for now -->
 
 		<div class="ui search">
@@ -60,5 +60,22 @@
 		  </div>
 		  <div class="results"></div>
 		</div>
+	    <ul class="ui_list">
+	    	Majors:
+			{{#each majorL}}
+				{{> major_name}}
+			{{/each}}
+
+		</ul>
+
+	</div>
+</template>
+
+
+<template name='major_name'>
+	<div class=content>
+	{{#if text}}
+	<button class="fluid ui button">{{text}}</button>
+	{{/if}}
 	</div>
 </template>
