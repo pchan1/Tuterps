@@ -1,4 +1,4 @@
-<!-- Dashboard that shows Tutors and Tutees buttons -->
+<!-- Departments list from UMD.io -->
 
 <template name= 'show_majors_page'>
 	<p>{{>majors}}</p>
@@ -17,7 +17,7 @@
 		<!-- Title for dashboard -->
 
 		<h2 class="ui header">
-		  <i class="dashboard icon"></i>
+		  <i class="university icon"></i>
 		  <div class="content">
 		    List of Majors
 		    <div class="sub header">Select which major you're interested in</div>
@@ -27,10 +27,10 @@
 		<br>
 
 		<div class="ui raised segment accordion">
-	      	<div class="title"><span class="ui large red ribbon label title"><i class="star icon"></i>Favorites</span></div>
+	      	<div class="title ui large top attached label title"><i class="star icon"></i>Favorite Majors</div>
 	    	
 	    	<div class="content">
-		    	<p>A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world.</p>
+		    	<p>CMSC</p>
 			</div>
 	
 	    </div>
@@ -39,43 +39,16 @@
              $(document).ready(function(){
                 $('.ui.accordion').accordion();
              });
-		</script>
 
-		
-	    <script>
-			$('.ui.search')
-			  .search({
-			    source: content
-			  })
-			;
+			$('.ui.search').search({
+				fullTextSearch: false,
+			    source: depts
+			});
 
-			var content = [
-			  { title: 'Andorra' },
-			  { title: 'United Arab Emirates' },
-			  { title: 'Afghanistan' },
-			  { title: 'Antigua' },
-			  { title: 'Anguilla' },
-			  { title: 'Albania' },
-			  { title: 'Armenia' },
-			  { title: 'Netherlands Antilles' },
-			  { title: 'Angola' },
-			  { title: 'Argentina' },
-			  { title: 'American Samoa' },
-			  { title: 'Austria' },
-			  { title: 'Australia' },
-			  { title: 'Aruba' },
-			  { title: 'Aland Islands' },
-			  { title: 'Azerbaijan' },
-			  { title: 'Bosnia' },
-			  { title: 'Barbados' },
-			  { title: 'Bangladesh' },
-			  { title: 'Belgium' },
-			  { title: 'Burkina Faso' },
-			  { title: 'Bulgaria' },
-			  { title: 'Bahrain' },
-			  { title: 'Burundi' }
-			  // etc
+			var depts = [
+				{major: ["AAST", "CMSC"]}
 			];
+			console.log(depts);
 		</script>
 
 		<!-- Not working correctly and not right data for now -->
@@ -87,5 +60,7 @@
 		  </div>
 		  <div class="results"></div>
 		</div>
+
+
 	</div>
 </template>

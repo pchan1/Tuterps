@@ -11,3 +11,4 @@ Accounts.onCreateUser(
     return user
     }
 )
+

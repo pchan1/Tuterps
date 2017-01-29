@@ -1,0 +1,94 @@
+<!-- Classes that adjusts dynamically to whatever department was chosen from previous
+departments page -->
+
+<template name= 'show_classes_page'>
+	<p>{{>classes}}</p>
+  	<!-- <p>{{>_mobile}}</p> -->
+</template>
+
+
+<!-- Computer version -->
+
+<template name="classes">
+
+	<div class="ui stackable two column centered container">
+
+		<br>
+
+		<!-- Title for dashboard -->
+
+		<h2 class="ui header">
+		  <i class="book icon"></i>
+		  <div class="content">
+		    List of Classes
+		    <div class="sub header">Select which class you're interested in</div>
+		  </div>
+		</h2>
+
+		<br>
+
+		<div class="ui raised segment accordion">
+	      	<div class="title ui large top attached label title"><i class="star icon"></i>Favorite Classes</div>
+	    	
+	    	<div class="content">
+		    	<p>CMSC131</p>
+			</div>
+	
+	    </div>
+
+	    <script language='javascript'>
+             $(document).ready(function(){
+                $('.ui.accordion').accordion();
+             });
+		</script>
+
+		
+	    <script>
+			$('.ui.search')
+			  .search({
+			    source: content
+			  })
+			;
+
+			var content = [
+			  { title: 'Andorra' },
+			  { title: 'United Arab Emirates' },
+			  { title: 'Afghanistan' },
+			  { title: 'Antigua' },
+			  { title: 'Anguilla' },
+			  { title: 'Albania' },
+			  { title: 'Armenia' },
+			  { title: 'Netherlands Antilles' },
+			  { title: 'Angola' },
+			  { title: 'Argentina' },
+			  { title: 'American Samoa' },
+			  { title: 'Austria' },
+			  { title: 'Australia' },
+			  { title: 'Aruba' },
+			  { title: 'Aland Islands' },
+			  { title: 'Azerbaijan' },
+			  { title: 'Bosnia' },
+			  { title: 'Barbados' },
+			  { title: 'Bangladesh' },
+			  { title: 'Belgium' },
+			  { title: 'Burkina Faso' },
+			  { title: 'Bulgaria' },
+			  { title: 'Bahrain' },
+			  { title: 'Burundi' }
+			  // etc
+			];
+		</script>
+
+		<!-- Not working correctly and not right data for now -->
+
+		<div class="ui search">
+		  <div class="ui fluid icon input">
+		    <input class="prompt" type="text" placeholder="Search majors...">
+		    <i class="search icon"></i>
+		  </div>
+		  <div class="results"></div>
+		</div>
+
+		
+	</div>
+</template>

@@ -1,9 +1,9 @@
 <!-- Header for all pages -->
 <template name="header_temp">
 	<head>
-  		<title>Tuterps</title>
- 		<link rel="icon" sizes="16x16 32x32" href="/images/favicon.ico">
- 		<script src="js/vendor/jquery-1.11.2.min.js"></script>
+		<title>Tuterps</title>
+		<link rel="icon" sizes="16x16 32x32" href="/images/favicon.ico">
+		<!-- <script src="js/vendor/jquery-1.11.2.min.js"></script> -->
 	</head>
 
 	{{>menu_temp}}
@@ -11,22 +11,30 @@
 
 <template name="menu_temp">
 	<div class="ui small pointing stackable menu">
-	  <a class="active item">
-	    Home
-	  </a>
+		<a class="active item">
+			Home
+		</a>
+		<a class="item">
+			<i class="users icon"></i>
+			Tutors
+		</a>
+		<a class="item">
+			<i class="student icon"></i>
+			Students
+		</a>
 
-	  <div class="labeled icon right menu">
-	  	<a class="item">
-		  	<i class="user icon"></i>
-		    Profile
-	  	</a>
+		<div class="labeled icon right menu">
+			<a class="item">
+				<i class="user icon"></i>
+				Profile
+			</a>
 
-	  	<!-- Button doesn't show up if shrunk screen -->
+			<!-- Button doesn't show up if shrunk screen -->
 
-	    <div class="item">
-	        <div class="ui primary button">Sign Out</div>
-	    </div>
+			<div class="item">
+				<div class="ui primary button">Sign Out</div>
+			</div>
 
-	  </div>
+		</div>
 	</div>
 </template>

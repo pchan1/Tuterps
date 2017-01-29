@@ -22,10 +22,11 @@
 
 		<br>
 
-		<div class="ui column stackable form success">
+		<form class="ui column stackable form success">
 			<div class="field">
 				<label>Profile Picture</label>
-				<img class="ui small rounded image" src="/images/axel.jpg">
+				<i class="user huge icon"></i>
+				<!-- <img class="ui small rounded image" src="/images/axel.jpg"> -->
 				<a>Add profile picture</a>
 			</div>
 			<div class="column equal width fields">
@@ -43,14 +44,34 @@
 				</div>
 			</div>
 
+			<!-- Code for dropdown to work -->
+
+			<script type="text/javascript">
+				$(function() {
+				    $('.ui.dropdown').dropdown();
+				});
+			</script>
+
 			<div class="required field">
 				<label>Year</label>
-				<input>
+				<div class="ui selection dropdown">
+				  <input type="hidden" name="year">
+				  <i class="dropdown icon"></i>
+				  <div class="default text">Choose your year...</div>
+				  <div class="menu">
+				    <div class="item" data-value="1">Freshman</div>
+				    <div class="item" data-value="2">Sophomore</div>
+				    <div class="item" data-value="3">Junior</div>
+				    <div class="item" data-value="4">Senior</div>
+				    <div class="item" data-value="5">Graduate</div>
+				    <div class="item" data-value="6">Doctorate</div>
+				  </div>
+				</div>
 			</div>
 
 			<div class="required field">
 				<label>Email</label>
-				<input type="email" name="email" placeholder="jdoe@umd.edu">
+				<input type="email" name="email" placeholder="example@umd.edu">
 			</div>
 
 			<div class="required field">
@@ -60,11 +81,62 @@
 
 			<div class="required field">
 				<label>Re-enter password</label>
-				<input type="password" name="verifyPassword">
+				<input type="password" name="confirmPassword">
 			</div>
 
 			<input class="fluid ui primary button" type="submit" name="submitBtn" value="Save">
-		</div>
+
+			<script type="text/javascript">
+				$('.ui.form')
+				  .form({
+				    fields: {
+				      firstName        : {
+				      	rules: [{
+			      			type: 'empty',
+			      			prompt: 'First name cannot be empty'
+				      	}]
+				      },
+				      lastName         : {
+				      	rules: [{
+				      		type: 'empty',
+				      		prompt: 'Last name cannot be empty'
+				      	}]
+				      },
+				      year             : {
+				      	rules: [{
+				      		type: 'empty',
+				      		prompt: 'Year cannot be empty'
+				      	}]
+				      },
+					  email            : {
+					  	rules: [{
+					  		type: 'empty',
+					  		prompt: 'Invalid email address'
+					  	}]
+					  },
+				      password         : {
+				      	rules: [{
+				      		type: ['minLength[6]', 'empty'],
+				      		prompt: 'Password must be at least 6 characters in length'
+				      	}]
+				      },
+				      confirmPassword  : {
+			            rules: [{
+			              type: 'match[password]',
+			              prompt: 'Mismatched password'
+			            }]
+			          }
+				   	},
+				   	onSuccess: function(e) { 
+				    	e.preventDefault();
+				        e.stopPropagation();
+				        alert('success');
+				        return false;
+				    }
+                 }
+             );
+			</script>
+		</form>
 		<!-- SUCCESS MESSAGE -->
 		<!-- <div class="ui success message">
 		    <div class="header">Saved!</div>
